@@ -1,0 +1,9 @@
+A:\Users\김동근\Documents\Visual Studio 2013\Projects\cSTART\5\bin\Debug\5.exe.config
+A:\Users\김동근\Documents\Visual Studio 2013\Projects\cSTART\5\bin\Debug\5.exe
+A:\Users\김동근\Documents\Visual Studio 2013\Projects\cSTART\5\bin\Debug\5.pdb
+A:\Users\김동근\Documents\Visual Studio 2013\Projects\cSTART\5\obj\Debug\5.csprojResolveAssemblyReference.cache
+A:\Users\김동근\Documents\Visual Studio 2013\Projects\cSTART\5\obj\Debug\5.exe
+A:\Users\김동근\Documents\Visual Studio 2013\Projects\cSTART\5\obj\Debug\5.pdb
+A:\Users\김동근\Desktop\Git\c#\day1\5\bin\Debug\5.exe.config
+A:\Users\김동근\Desktop\Git\c#\day1\5\obj\Debug\5.exe
+A:\Users\김동근\Desktop\Git\c#\day1\5\obj\Debug\5.pdb

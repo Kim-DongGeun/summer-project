@@ -1,0 +1,5 @@
+A:\Users\김동근\Documents\Visual Studio 2013\Projects\cSTART\4\bin\Debug\4.exe.config
+A:\Users\김동근\Documents\Visual Studio 2013\Projects\cSTART\4\bin\Debug\4.exe
+A:\Users\김동근\Documents\Visual Studio 2013\Projects\cSTART\4\bin\Debug\4.pdb
+A:\Users\김동근\Documents\Visual Studio 2013\Projects\cSTART\4\obj\Debug\4.exe
+A:\Users\김동근\Documents\Visual Studio 2013\Projects\cSTART\4\obj\Debug\4.pdb

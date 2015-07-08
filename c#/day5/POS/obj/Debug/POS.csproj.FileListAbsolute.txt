@@ -1,0 +1,6 @@
+a:\users\김동근\documents\visual studio 2013\Projects\day5\POS\bin\Debug\POS.exe.config
+a:\users\김동근\documents\visual studio 2013\Projects\day5\POS\obj\Debug\POS.csprojResolveAssemblyReference.cache
+a:\users\김동근\documents\visual studio 2013\Projects\day5\POS\bin\Debug\POS.exe
+a:\users\김동근\documents\visual studio 2013\Projects\day5\POS\bin\Debug\POS.pdb
+a:\users\김동근\documents\visual studio 2013\Projects\day5\POS\obj\Debug\POS.exe
+a:\users\김동근\documents\visual studio 2013\Projects\day5\POS\obj\Debug\POS.pdb

@@ -1,0 +1,16 @@
+a:\users\김동근\documents\visual studio 2013\Projects\SUMMERPROJECT\planner\bin\Debug\planner.exe.config
+A:\Users\김동근\Documents\Visual Studio 2013\Projects\SUMMERPROJECT\planner\bin\Debug\planner.exe
+A:\Users\김동근\Documents\Visual Studio 2013\Projects\SUMMERPROJECT\planner\bin\Debug\planner.pdb
+A:\Users\김동근\Documents\Visual Studio 2013\Projects\SUMMERPROJECT\planner\obj\Debug\planner.csprojResolveAssemblyReference.cache
+A:\Users\김동근\Documents\Visual Studio 2013\Projects\SUMMERPROJECT\planner\obj\Debug\planner.Form1.resources
+A:\Users\김동근\Documents\Visual Studio 2013\Projects\SUMMERPROJECT\planner\obj\Debug\planner.Properties.Resources.resources
+A:\Users\김동근\Documents\Visual Studio 2013\Projects\SUMMERPROJECT\planner\obj\Debug\planner.csproj.GenerateResource.Cache
+A:\Users\김동근\Documents\Visual Studio 2013\Projects\SUMMERPROJECT\planner\obj\Debug\planner.exe
+A:\Users\김동근\Documents\Visual Studio 2013\Projects\SUMMERPROJECT\planner\obj\Debug\planner.pdb
+A:\Users\김동근\Documents\Visual Studio 2013\Projects\SUMMERPROJECT\planner\bin\Debug\Interop.WMPLib.dll
+A:\Users\김동근\Documents\Visual Studio 2013\Projects\SUMMERPROJECT\planner\bin\Debug\AxInterop.WMPLib.dll
+A:\Users\김동근\Documents\Visual Studio 2013\Projects\SUMMERPROJECT\planner\obj\Debug\Interop.WMPLib.dll
+A:\Users\김동근\Documents\Visual Studio 2013\Projects\SUMMERPROJECT\planner\obj\Debug\AxInterop.WMPLib.dll
+A:\Users\김동근\Documents\Visual Studio 2013\Projects\SUMMERPROJECT\planner\obj\Debug\planner.csproj.ResolveComReference.cache
+A:\Users\김동근\Documents\Visual Studio 2013\Projects\SUMMERPROJECT\planner\obj\Debug\planner.Form2.resources
+A:\Users\김동근\Documents\Visual Studio 2013\Projects\SUMMERPROJECT\planner\obj\Debug\planner.Form3.resources

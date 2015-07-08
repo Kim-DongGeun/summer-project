@@ -1,0 +1,8 @@
+a:\users\김동근\documents\visual studio 2013\Projects\day4\1\bin\Debug\1.exe.config
+a:\users\김동근\documents\visual studio 2013\Projects\day4\1\bin\Debug\1.exe
+a:\users\김동근\documents\visual studio 2013\Projects\day4\1\bin\Debug\1.pdb
+a:\users\김동근\documents\visual studio 2013\Projects\day4\1\obj\Debug\1.csprojResolveAssemblyReference.cache
+a:\users\김동근\documents\visual studio 2013\Projects\day4\1\obj\Debug\1.exe
+a:\users\김동근\documents\visual studio 2013\Projects\day4\1\obj\Debug\1.pdb
+A:\Users\김동근\Desktop\Git\c#\day4\1\bin\Debug\1.exe.config
+A:\Users\김동근\Desktop\Git\c#\day4\1\obj\Debug\1.exe
