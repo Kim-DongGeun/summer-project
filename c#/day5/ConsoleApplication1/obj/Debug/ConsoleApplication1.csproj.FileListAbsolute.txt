@@ -1,0 +1,6 @@
+A:\Users\김동근\Documents\Visual Studio 2013\Projects\day5\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+A:\Users\김동근\Documents\Visual Studio 2013\Projects\day5\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+A:\Users\김동근\Documents\Visual Studio 2013\Projects\day5\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+A:\Users\김동근\Documents\Visual Studio 2013\Projects\day5\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+A:\Users\김동근\Documents\Visual Studio 2013\Projects\day5\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+A:\Users\김동근\Documents\Visual Studio 2013\Projects\day5\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache

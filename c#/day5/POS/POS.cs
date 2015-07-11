@@ -8,15 +8,21 @@ namespace POS
 {
     public class Pos
     {
-        public List<Order> orderlist = new List<Order>();
+        Set set = new Set();
+        public List<Complete> completelist = new List<Complete>();
         public void run()
         {
+            set.setMenu();
             Tabel[] Tabellist = new Tabel[10];
-
             while (true)
             {
+                int[] count = new int[10];
                 Console.WriteLine("input ID and password");
                 string inputID = Console.ReadLine();
+                if (inputID == "0")
+                {
+                    break;
+                }
                 string inputPW = Console.ReadLine();
                 User user1 = new User("admin", "admin");
                 User user2 = new User("2015104154", "1111");
@@ -24,103 +30,204 @@ namespace POS
                 {
                     if (user1.m_ID == inputID && user1.m_PW == inputPW)//점장
                     {
-                        Console.WriteLine("input salelist or cancel");
+                        Console.WriteLine("input salelist or cancel or back");
                         string inputoption = Console.ReadLine();
                         if (inputoption == "salelist")
                         {
-
+                            int TOTAL = 0;
+                            int I = 0;
+                            Console.WriteLine("------------------------showlist-----------------------");
+                            foreach (var item in completelist)
+                            {
+                                if (item == null)
+                                {
+                                    continue;
+                                }
+                                Console.WriteLine((I + 1) +".");
+                                foreach(var ITEM in item.m_tabel.m_Orderlist)
+                                {
+                                    Console.WriteLine(ITEM.m_menu.menuName + " : " + ITEM.m_menuAmount + " ");
+                                }
+                                Console.WriteLine(item.m_total + "\t" + item.m_howto);
+                                Console.WriteLine("-------------------------------------------------------");
+                                I += 1;
+                                TOTAL += item.m_total;
+                            }
+                            Console.WriteLine("TOTAL - " + TOTAL);
+                            
                         }
                         else if (inputoption == "cancel")
                         {
-
+                            int A = 0;
+                            Console.WriteLine("Input number to cancel");
+                            Console.Write("Enable number : ");
+                            foreach (var item in completelist)
+                            {
+                                if (item == null)
+                                {
+                                    continue;
+                                }
+                                Console.Write((A+1) + " ");
+                                A += 1;
+                            }
+                            Console.Write("\n");
+                            int inputcancel = Int32.Parse(Console.ReadLine());
+                            completelist[inputcancel - 1] = null;
+                            Console.WriteLine("Success!");
+                        }
+                        else if (inputoption == "back")
+                        {
+                            break;
                         }
                     }
                     else if (user2.m_ID == inputID && user2.m_PW == inputPW)//사원
                     {
-                        Console.WriteLine("input order or showlist or calculate");
+                        int total;
+                        Console.WriteLine("input order, showlist, calculate, logout");
                         string inputoption1 = Console.ReadLine();
-                        int count = 0;
                         if (inputoption1 == "order")
                         {
+                            Tabel tabel = new Tabel();
+                            foreach (var I in set.Menulist)
+                            {
+                                Console.WriteLine(I.menuName + " : " + I.menuprice);
+                            }
                             Console.WriteLine("input tabel number, customers number");
                             int inputtabel = Int32.Parse(Console.ReadLine());
-                            int inputcustomer = Int32.Parse(Console.ReadLine());
+                            int inputcustomer;
+                            if (Tabellist[inputtabel - 1] == null)
+                            {
+                                inputcustomer = Int32.Parse(Console.ReadLine());
+                            }
+                            else
+                            {
+                                inputcustomer = Tabellist[inputtabel - 1].m_customers;
+                            }
                             Console.WriteLine("input meun name, meun amount");
-                            int num = 0;
                             while (true)
                             {
-                                string menuName = "";
-                                int menuAmount = 0;
-                                string input = Console.ReadLine();
-                                if (input == "")
+                                int num = 0;
+                                string menuName = Console.ReadLine();
+                                if (menuName == "")
                                 {
                                     break;
                                 }
-                                foreach (var item in input)
+                                foreach (var menu in set.Menulist)
                                 {
-                                    if (item == ' ')
+                                    if (menu.menuName == menuName)
                                     {
                                         num = 1;
-                                    }
-                                    else if (num == 0)
-                                    {
-                                        menuName += item;
-                                    }
-                                    else if (num == 1)
-                                    {
-                                        menuAmount = item;
+                                        break;
                                     }
                                 }
+                                if (num == 0)
+                                {
+                                    Console.WriteLine("Not Found");
+                                    continue;
+                                }
+                                int menuAmount = Int32.Parse(Console.ReadLine());
+                                int INT = 0;
+                                if (Tabellist[inputtabel - 1] != null)
+                                {
+                                    foreach (var i in Tabellist[inputtabel - 1].m_Orderlist)
+                                    {
+                                        if (menuName == i.m_menu.menuName)
+                                        {
+                                            i.m_menuAmount += menuAmount;
+                                            INT = 1;
+                                        }
+                                    }
+                                    if (INT == 1)
+                                    {
+                                        continue;
+                                    }
+                                    Order order1 = new Order(menuName, menuAmount);
+                                    Tabellist[inputtabel - 1].m_Orderlist.Add(order1);
+                                    count[inputtabel - 1] += 1;
+                                    continue;
+                                }
                                 Order order = new Order(menuName, menuAmount);
-                                orderlist.Add(order);
+                                tabel.m_customers = inputcustomer;
+                                tabel.m_Orderlist.Add(order);
+                                if (Tabellist[inputtabel - 1] == null)
+                                {
+                                    Tabellist[inputtabel - 1] = tabel;
+                                }
+                                else
+                                {
+                                    Tabellist[inputtabel - 1].m_Orderlist.Add(order);
+                                }
+                                count[inputtabel-1] += 1;
                             }
-                            Tabel tabel = new Tabel(inputcustomer, orderlist);
-                            Tabellist[inputtabel - 1] = tabel;
-                            count += 1;
                         }
                         else if (inputoption1 == "showlist")
                         {
-                            Console.WriteLine("-----------------showlist-----------------");
-                            Console.WriteLine("\t\t\tMenu\t\tNumber\t\tSum");
+                            Console.WriteLine("------------------------showlist-----------------------");
                             for (int j = 0; j < 10; j++)
                             {
+                                total = 0;
                                 if (Tabellist[j] == null)
                                 {
                                     continue;
                                 }
-                                Console.Write("Tabel Num - " + j + 1 + "\t\t");
-                                for (int i = 0; i < count; i++)
+                                Console.WriteLine("\nTabel Num - " + (j + 1));
+                                for (int i = 0; i < count[j]; i++)
                                 {
                                     int number = 0;
-                                    foreach (var k in Menulist)
+                                    foreach (var k in set.Menulist)
                                     {
-                                        if (k.menuName == orderlist[i].m_menu.menuName)
+                                        if (k.menuName == Tabellist[j].m_Orderlist[i].m_menu.menuName)
                                         {
                                             break;
                                         }
                                         number += 1;
                                     }
-                                    Console.WriteLine("\t" + orderlist[i].m_menu.menuName + "\t\t" + orderlist[i].m_menuAmount + "\t\t" + Menulist[number].menuprice * orderlist[i].m_menuAmount);
+                                    Console.WriteLine(Tabellist[j].m_Orderlist[i].m_menu.menuName + " - " + Tabellist[j].m_Orderlist[i].m_menuAmount + "\t" + set.Menulist[number].menuprice * Tabellist[j].m_Orderlist[i].m_menuAmount);
+                                    total += set.Menulist[number].menuprice * Tabellist[j].m_Orderlist[i].m_menuAmount;
                                 }
+                                Console.WriteLine("\nTotal : " + total);
+                                Console.WriteLine("-------------------------------------------------------");
                             }
                         }
                         else if (inputoption1 == "calculate")
                         {
+                            total = 0;
                             Console.WriteLine("input tabel number");
-                            Console.Write("Enable number :");
-                            for (int I = 0; I < 10; I++)
-                            {
-                                if (Tabellist[I] == null)
+                            
+                                Console.Write("Enable number :");
+                                for (int I = 0; I < 10; I++)
                                 {
+                                    if (Tabellist[I] == null)
+                                    {
+                                        continue;
+                                    }
+                                    Console.Write(" " + (I + 1));
+                                }
+                                Console.Write("\n");
+                                int tabelnum = Int32.Parse(Console.ReadLine());
+                                Console.WriteLine("how to pay : card or money");
+                                string howto = Console.ReadLine();
+                                if (howto != "card" && howto != "money")
+                                {
+                                    Console.WriteLine("Wrong input");
                                     continue;
                                 }
-                                Console.Write(" " + (I + 1));
-                            }
-                            int tabelnum = Int32.Parse(Console.ReadLine());
-                            foreach (var item in Tabellist[tabelnum].m_Orderlist)
+                            foreach (var item in Tabellist[tabelnum-1].m_Orderlist)
                             {
-                                Console.WriteLine(item.m_menu.menuName + "(" + item.m_menuAmount + ") ")
+                                Console.Write(item.m_menu.menuName + "(" + item.m_menuAmount + ") ");
                             }
+                            foreach (var item in Tabellist[tabelnum-1].m_Orderlist)
+                            {
+                                total += item.m_menu.menuprice * item.m_menuAmount;
+                            }
+                            Complete complete = new Complete(total,howto,Tabellist[tabelnum-1]);
+                            completelist.Add(complete);
+                            Console.WriteLine("\nTotal : " + complete.m_total +"\nSuccess");
+                            Tabellist[tabelnum - 1] = null;
+                        }
+                        else if(inputoption1 == "logout")
+                        {
+                            break;
                         }
                     }
                     else
@@ -131,49 +238,7 @@ namespace POS
                 }
             }
         }
-        List<Menu> Menulist = new List<Menu>();
-        public void setMenu()
-        {
-            Menu menu1 = new Menu();
-            menu1.menuName = "규동";
-            menu1.menuprice = 6500;
-            Menulist.Add(menu1);
-            Menu menu2 = new Menu();
-            menu2.menuName = "가츠동";
-            menu2.menuprice = 7000;
-            Menulist.Add(menu2);
-            Menu menu3 = new Menu();
-            menu3.menuName = "에비동";
-            menu3.menuprice = 7500;
-            Menulist.Add(menu3);
-            Menu menu4 = new Menu();
-            menu4.menuName = "사케동";
-            menu4.menuprice = 11000;
-            Menulist.Add(menu4);
-            Menu menu5 = new Menu();
-            menu5.menuName = "하카타";
-            menu5.menuprice = 7500;
-            Menulist.Add(menu5);
-            Menu menu6 = new Menu();
-            menu6.menuName = "아카사카";
-            menu6.menuprice = 7500;
-            Menulist.Add(menu6);
-            Menu menu7 = new Menu();
-            menu7.menuName = "큐슈";
-            menu7.menuprice = 8000;
-            Menulist.Add(menu7);
-            Menu menu8 = new Menu();
-            menu8.menuName = "요코하마";
-            menu8.menuprice = 8000;
-            Menulist.Add(menu8);
-            Menu menu9 = new Menu();
-            menu9.menuName = "교자만두";
-            menu9.menuprice = 5000;
-            Menulist.Add(menu9);
-            Menu menu10 = new Menu();
-            menu10.menuName = "밥추가";
-            menu10.menuprice = 1000;
-            Menulist.Add(menu10);
-        }
     }
 }
+
+
