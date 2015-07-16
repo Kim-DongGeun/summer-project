@@ -1,0 +1,15 @@
+a:\users\host\documents\visual studio 2013\Projects\day10\Shape\bin\Debug\Shape.exe.config
+a:\users\host\documents\visual studio 2013\Projects\day10\Shape\obj\Debug\Shape.csprojResolveAssemblyReference.cache
+a:\users\host\documents\visual studio 2013\Projects\day10\Shape\bin\Debug\Shape.exe
+a:\users\host\documents\visual studio 2013\Projects\day10\Shape\bin\Debug\Shape.pdb
+a:\users\host\documents\visual studio 2013\Projects\day10\Shape\obj\Debug\Shape.exe
+a:\users\host\documents\visual studio 2013\Projects\day10\Shape\obj\Debug\Shape.pdb
+A:\Users\host\Desktop\Git\c#\day10\Shape\bin\Debug\Shape.exe.config
+A:\Users\host\Desktop\Git\c#\day10\Shape\obj\Debug\Shape.exe
+A:\Users\host\Desktop\Git\c#\day10\Shape\obj\Debug\Shape.pdb
+A:\Users\host\Desktop\Git\c#\Lab_0715_Shape\Shape\bin\Debug\Shape.exe.config
+A:\Users\host\Desktop\Git\c#\Lab_0715_Shape\Shape\obj\Debug\Shape.exe
+A:\Users\host\Desktop\Git\c#\Lab_0715_Shape\Shape\obj\Debug\Shape.pdb
+A:\Users\host\Desktop\Git\c#\Lab_0715_Shape\Shape\bin\Debug\Shape.exe
+A:\Users\host\Desktop\Git\c#\Lab_0715_Shape\Shape\bin\Debug\Shape.pdb
+A:\Users\host\Desktop\Git\c#\Lab_0715_Shape\Shape\obj\Debug\Shape.csprojResolveAssemblyReference.cache
