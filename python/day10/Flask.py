@@ -1,5 +1,5 @@
 #-*- coding:utf-8 -*-
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template, redirect, request
 from flaskext.mysql import MySQL
 
 
@@ -12,6 +12,34 @@ app.config['MYSQL_DATABASE_HOST'] = 'data.khuhacker.com'
 app.config['MYSQL_CHARSET'] = 'utf-8'
 mysql.init_app(app)
 
+@app.route('/guestbook')
+def guestbook():
+    cursor = mysql.connect().cursor()
+    cursor.execute('SELECT * FROM KDG_users')
+    datas = cursor.fetchall()
+    cursor.close()
+    return render_template("guestbook.html", datas=datas)
+
+@app.route('/submit', methods=['POST'])
+def submit():
+    if request.method == "POST":
+        Num = request.form["Num"]
+        author = request.form["Name"]
+        Comment = request.form["Comment"]
+        con = mysql.connect()
+        cur = con.cursor()
+        if (Num != '') and (author == '') and (Comment == ''):
+            cur.execute('DELETE FROM KDG_users WHERE num=' + Num)
+        elif (author != '') and (Comment != '') and (Num == ''):
+            cur.execute('INSERT INTO KDG_users (author, comment) VALUES (%s, %s)',(author, Comment))
+        else:
+            cur.execute("UPDATE KDG_users SET author=" + "'" +author+ "'" + ", comment=" + "'" +Comment+ "'" + "WHERE num=" + Num)
+        con.commit()
+        cur.close()
+        return redirect('/guestbook')
+
+
+'''
 @app.route('/userlist/')
 def showUsers():
     cur = mysql.connect().cursor()
@@ -33,7 +61,7 @@ def addUser(Name, Content):
     cur.close()
     return redirect('/userlist')
 
-'''@app.route('/index')
+@app.route('/index')
 @app.route('/index/<name>')
 def hello_world(name=''):
     return render_template('hello.html', username=name)
