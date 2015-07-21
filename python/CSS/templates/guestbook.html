@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form action = "/submit" method="post">
+    번호:<input type="text" name="Num"><br>
+    이름:<input type = "text" name = "Name"><br>
+    코멘트:<input type = "text" name = "Comment" size = "40">
+    <input type="submit" value="입력">
+<br><br>
+{% for data in datas %}
+    {{ data[0] }}
+    이름 : {{ data[1] }} <br>
+    코멘트 : {{ data[2] }} <br><br>
+{% endfor %}
+</body>
+</html>
