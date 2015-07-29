@@ -1,0 +1,19 @@
+A:\Users\host\Documents\Visual Studio 2013\Projects\SUMMERPROJECT\Project\bin\Debug\WindowsFormsApplication1.exe.config
+A:\Users\host\Documents\Visual Studio 2013\Projects\SUMMERPROJECT\Project\obj\Debug\WindowsFormsApplication1.exe
+A:\Users\host\Documents\Visual Studio 2013\Projects\SUMMERPROJECT\Project\obj\Debug\WindowsFormsApplication1.pdb
+A:\Users\host\Documents\Visual Studio 2013\Projects\SUMMERPROJECT\Project\bin\Debug\WindowsFormsApplication1.exe
+A:\Users\host\Documents\Visual Studio 2013\Projects\SUMMERPROJECT\Project\bin\Debug\WindowsFormsApplication1.pdb
+A:\Users\host\Documents\Visual Studio 2013\Projects\SUMMERPROJECT\Project\bin\Debug\MySql.Data.dll
+A:\Users\host\Documents\Visual Studio 2013\Projects\SUMMERPROJECT\Project\bin\Debug\MySql.Data.Entity.dll
+A:\Users\host\Documents\Visual Studio 2013\Projects\SUMMERPROJECT\Project\bin\Debug\MySql.Data.Entity.EF6.dll
+A:\Users\host\Documents\Visual Studio 2013\Projects\SUMMERPROJECT\Project\bin\Debug\MySql.Fabric.Plugin.dll
+A:\Users\host\Documents\Visual Studio 2013\Projects\SUMMERPROJECT\Project\bin\Debug\MySql.Web.dll
+A:\Users\host\Documents\Visual Studio 2013\Projects\SUMMERPROJECT\Project\obj\Debug\Project.csprojResolveAssemblyReference.cache
+A:\Users\host\Documents\Visual Studio 2013\Projects\SUMMERPROJECT\Project\obj\Debug\WindowsFormsApplication1.Form1.resources
+A:\Users\host\Documents\Visual Studio 2013\Projects\SUMMERPROJECT\Project\obj\Debug\WindowsFormsApplication1.Form2.resources
+A:\Users\host\Documents\Visual Studio 2013\Projects\SUMMERPROJECT\Project\obj\Debug\WindowsFormsApplication1.Form3.resources
+A:\Users\host\Documents\Visual Studio 2013\Projects\SUMMERPROJECT\Project\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+A:\Users\host\Documents\Visual Studio 2013\Projects\SUMMERPROJECT\Project\obj\Debug\Project.csproj.GenerateResource.Cache
+A:\Users\host\Desktop\Git\project\Project\bin\Debug\WindowsFormsApplication1.exe.config
+A:\Users\host\Desktop\Git\project\Project\obj\Debug\WindowsFormsApplication1.exe
+A:\Users\host\Desktop\Git\project\Project\obj\Debug\WindowsFormsApplication1.pdb
